@@ -16,6 +16,11 @@ namespace BigNums
 
         public static class BigMath
         {
+            /// <summary>
+            /// Генерация простого числа с заданым числом разрядов
+            /// ex. GetBigPrime(10) - сгенерить простое число с 10 разрядами, оно будет больше 2^10, но меньше 2^10+2^9+...+2^1+1
+            /// Почему то может бесконечно генерить большое простое число (это из-за теста Ферма, но пока ещё недоделан)
+            /// </summary>
             public static BigInteger GetBigPrime(int dec)
             {
                 Random r = new Random();
